@@ -7,9 +7,6 @@ generare 10 indirizzi email e stamparli in pagina all'interno di una lista.*/
 
 const emailList = document.getElementById('list');
 
-//creo una variabile con un array vuoto dove metterò al suo interno gli elementi generati
-
-const generateEmail = [];
 
 //uso un ciclo for per generare 10 elementi 
 //dentro al ciclo effettuo una chiamata ajax con l'apposita API
@@ -20,8 +17,8 @@ for(let i=0 ; i < 10 ; i++){
 
   axios.get(`https://flynn.boolean.careers/exercises/api/random/mail`).then((resp) => {
 
-      generateEmail.push(resp.data.response);
+       const email = resp.data.response;
 
-      emailList.innerHTML = `<li>${generateEmail}</li>`;
+      emailList.innerHTML += `<li>${email}</li>`;
   });
 };
