@@ -10,8 +10,7 @@ const emailList = document.getElementById('list');
 
 //uso un ciclo for per generare 10 elementi 
 //dentro al ciclo effettuo una chiamata ajax con l'apposita API
-//pusho gli elementi generati nell'array vuoto
-//innietto la variabile con l'array di 10 elementi nell'html
+//innietto la variabile con i 10 elementi nell'html
 
 for(let i=0 ; i < 10 ; i++){
 
